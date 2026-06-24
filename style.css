@@ -1,0 +1,50 @@
+/* ═══════════════════════════════════════════
+   style.css — this.is.ryad.portfolio
+   ═══════════════════════════════════════════ */
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #08090d; }
+::-webkit-scrollbar-thumb { background: #232733; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #911212ec; }
+
+/* Gradient text helper */
+.gradient-text {
+  background: linear-gradient(135deg, #8b0000 0%, #ff0000 40%, #660000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Grid noise overlay */
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Card glow on hover */
+.card-glow:hover {
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.1), 0 8px 32px rgba(0,0,0,0.5);
+}
+
+/* Scroll reveal base */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dot grid background */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(255,0,0,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Navbar blur */
+.nav-blur {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
