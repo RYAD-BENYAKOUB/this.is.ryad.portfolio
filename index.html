@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>this.is.ryad.portfolio — Développeur Full-Stack</title>
-  <meta name="description" content="Portfolio de Ryad — Développeur Full-Stack spécialisé en Laravel, Tailwind CSS, Supabase, PostgreSQL et intégration d'IA." />
+  <meta name="description"
+    content="Portfolio de Ryad — Développeur Full-Stack spécialisé en Laravel, Tailwind CSS, Supabase, PostgreSQL et intégration d'IA." />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -13,7 +15,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -23,26 +27,36 @@
   <!-- ═══════════════════════════════════════════ -->
   <!-- NAVIGATION                                  -->
   <!-- ═══════════════════════════════════════════ -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-blur bg-dark-950/70 border-b border-white/5 transition-all duration-300">
+  <nav id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 nav-blur bg-dark-950/70 border-b border-white/5 transition-all duration-300">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
       <a href="#hero" class="group flex items-center gap-3">
-        <img src="IMG/r.png" alt="this.is.ryad" class="w-9 h-9 rounded-lg object-cover shadow-lg shadow-accent/20 group-hover:shadow-accent/40 transition-shadow duration-300" />
+        <img src="IMG/r.png" alt="this.is.ryad"
+          class="w-9 h-9 rounded-lg object-cover shadow-lg shadow-accent/20 group-hover:shadow-accent/40 transition-shadow duration-300" />
         <span class="font-mono text-sm text-gray-400 group-hover:text-gray-200 transition-colors duration-300">
-          <span class="text-accent">this</span><span class="text-gray-600">.</span><span class="text-gray-300">is</span><span class="text-gray-600">.</span><span class="text-white font-semibold">ryad</span><span class="text-gray-600">.</span><span class="text-accent-light">portfolio</span>
+          <span class="text-accent">this</span><span class="text-gray-600">.</span><span
+            class="text-gray-300">is</span><span class="text-gray-600">.</span><span
+            class="text-white font-semibold">ryad</span><span class="text-gray-600">.</span><span
+            class="text-accent-light">portfolio</span>
         </span>
       </a>
 
       <!-- Nav Links (Desktop) -->
       <div class="hidden md:flex items-center gap-8">
-        <a href="#projets" class="text-sm text-gray-400 hover:text-white transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full">Projets</a>
-        <a href="#contact" class="text-sm text-gray-400 hover:text-white transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full">Contact</a>
-        <a href="#contact" class="text-sm px-5 py-2 rounded-lg bg-accent/10 text-accent-light border border-accent/20 hover:bg-accent/20 hover:border-accent/40 transition-all duration-300">Collaborer</a>
+        <a href="#projets"
+          class="text-sm text-gray-400 hover:text-white transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full">Projets</a>
+        <a href="#contact"
+          class="text-sm text-gray-400 hover:text-white transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+        <a href="#contact"
+          class="text-sm px-5 py-2 rounded-lg bg-accent/10 text-accent-light border border-accent/20 hover:bg-accent/20 hover:border-accent/40 transition-all duration-300">Collaborer</a>
       </div>
 
       <!-- Mobile hamburger -->
       <button id="menu-toggle" class="md:hidden text-gray-400 hover:text-white transition-colors p-1" aria-label="Menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
       </button>
     </div>
 
@@ -51,7 +65,8 @@
       <div class="px-6 py-4 flex flex-col gap-4">
         <a href="#projets" class="text-sm text-gray-400 hover:text-white transition-colors">Projets</a>
         <a href="#contact" class="text-sm text-gray-400 hover:text-white transition-colors">Contact</a>
-        <a href="#contact" class="text-sm px-5 py-2 rounded-lg bg-accent/10 text-accent-light border border-accent/20 text-center">Collaborer</a>
+        <a href="#contact"
+          class="text-sm px-5 py-2 rounded-lg bg-accent/10 text-accent-light border border-accent/20 text-center">Collaborer</a>
       </div>
     </div>
   </nav>
@@ -61,12 +76,17 @@
   <!-- ═══════════════════════════════════════════ -->
   <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden dot-grid">
     <!-- Decorative gradient orbs -->
-    <div class="absolute top-1/4 -left-32 w-96 h-96 bg-accent/10 rounded-full blur-[128px] animate-float pointer-events-none"></div>
-    <div class="absolute bottom-1/4 -right-32 w-80 h-80 bg-purple-600/8 rounded-full blur-[100px] animate-float pointer-events-none" style="animation-delay: -3s;"></div>
+    <div
+      class="absolute top-1/4 -left-32 w-96 h-96 bg-accent/10 rounded-full blur-[128px] animate-float pointer-events-none">
+    </div>
+    <div
+      class="absolute bottom-1/4 -right-32 w-80 h-80 bg-purple-600/8 rounded-full blur-[100px] animate-float pointer-events-none"
+      style="animation-delay: -3s;"></div>
 
     <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
       <!-- Status badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dark-700/60 border border-white/5 text-xs text-gray-400 mb-8 animate-fade-in">
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dark-700/60 border border-white/5 text-xs text-gray-400 mb-8 animate-fade-in">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         Disponible pour de nouveaux projets
       </div>
@@ -79,7 +99,8 @@
       </h1>
 
       <!-- Sub-heading -->
-      <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up" style="animation-delay: 0.15s;">
+      <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up"
+        style="animation-delay: 0.15s;">
         Développeur <span class="text-white font-medium">Full-Stack</span> passionné par les architectures modernes.
         Je transforme des idées en produits performants avec
         <span class="text-accent-light font-medium">Laravel</span>,
@@ -90,29 +111,46 @@
       </p>
 
       <!-- CTA buttons -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style="animation-delay: 0.3s;">
-        <a href="#projets" class="group px-8 py-3.5 rounded-xl bg-accent hover:bg-accent-dim text-white font-semibold text-sm shadow-lg shadow-accent/25 hover:shadow-accent/40 transition-all duration-300 flex items-center gap-2">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up"
+        style="animation-delay: 0.3s;">
+        <a href="#projets"
+          class="group px-8 py-3.5 rounded-xl bg-accent hover:bg-accent-dim text-white font-semibold text-sm shadow-lg shadow-accent/25 hover:shadow-accent/40 transition-all duration-300 flex items-center gap-2">
           Explorer mes projets
-          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
         </a>
-        <a href="#contact" class="px-8 py-3.5 rounded-xl bg-dark-700/50 border border-white/10 text-gray-300 hover:text-white hover:border-white/20 font-medium text-sm transition-all duration-300">
+        <a href="#contact"
+          class="px-8 py-3.5 rounded-xl bg-dark-700/50 border border-white/10 text-gray-300 hover:text-white hover:border-white/20 font-medium text-sm transition-all duration-300">
           Me contacter
         </a>
       </div>
 
       <!-- Tech stack pills -->
-      <div class="mt-16 flex flex-wrap items-center justify-center gap-3 animate-fade-up" style="animation-delay: 0.45s;">
-        <span class="px-3 py-1.5 rounded-full bg-dark-700/50 border border-white/5 text-xs text-gray-500 font-mono">Laravel</span>
-        <span class="px-3 py-1.5 rounded-full bg-dark-700/50 border border-white/5 text-xs text-gray-500 font-mono">Tailwind CSS</span>
-        <span class="px-3 py-1.5 rounded-full bg-dark-700/50 border border-white/5 text-xs text-gray-500 font-mono">Supabase</span>
-        <span class="px-3 py-1.5 rounded-full bg-dark-700/50 border border-white/5 text-xs text-gray-500 font-mono">PostgreSQL</span>
-        <span class="px-3 py-1.5 rounded-full bg-dark-700/50 border border-white/5 text-xs text-gray-500 font-mono">Python / IA</span>
-        <span class="px-3 py-1.5 rounded-full bg-dark-700/50 border border-white/5 text-xs text-gray-500 font-mono">REST API</span>
+      <div class="mt-16 flex flex-wrap items-center justify-center gap-3 animate-fade-up"
+        style="animation-delay: 0.45s;">
+        <span
+          class="px-3 py-1.5 rounded-full bg-dark-700/50 border border-white/5 text-xs text-gray-500 font-mono">Laravel</span>
+        <span
+          class="px-3 py-1.5 rounded-full bg-dark-700/50 border border-white/5 text-xs text-gray-500 font-mono">Tailwind
+          CSS</span>
+        <span
+          class="px-3 py-1.5 rounded-full bg-dark-700/50 border border-white/5 text-xs text-gray-500 font-mono">Supabase</span>
+        <span
+          class="px-3 py-1.5 rounded-full bg-dark-700/50 border border-white/5 text-xs text-gray-500 font-mono">PostgreSQL</span>
+        <span
+          class="px-3 py-1.5 rounded-full bg-dark-700/50 border border-white/5 text-xs text-gray-500 font-mono">Python /
+          IA</span>
+        <span class="px-3 py-1.5 rounded-full bg-dark-700/50 border border-white/5 text-xs text-gray-500 font-mono">REST
+          API</span>
       </div>
     </div>
 
     <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600 animate-fade-in" style="animation-delay: 1s;">
+    <div
+      class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600 animate-fade-in"
+      style="animation-delay: 1s;">
       <span class="text-[10px] uppercase tracking-widest">Scroll</span>
       <div class="w-5 h-8 rounded-full border border-gray-700 flex items-start justify-center p-1">
         <div class="w-1 h-2 rounded-full bg-accent animate-bounce"></div>
@@ -129,141 +167,219 @@
       <div class="text-center mb-16 reveal">
         <span class="inline-block text-accent font-mono text-sm tracking-wider mb-3">// PROJETS</span>
         <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Ce que j'ai construit</h2>
-        <p class="text-gray-400 max-w-xl mx-auto">Une sélection de projets reflétant ma passion pour le code propre, le design soigné et les solutions innovantes.</p>
+        <p class="text-gray-400 max-w-xl mx-auto">Une sélection de projets reflétant ma passion pour le code propre, le
+          design soigné et les solutions innovantes.</p>
       </div>
 
       <!-- Projects grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <!-- ── Card 1: DAWN&SEA v1 ── -->
-        <div class="reveal group relative rounded-2xl bg-dark-800/60 border border-gray-700/50 hover:border-accent/40 transition-all duration-500 card-glow overflow-hidden hover:scale-[1.02]">
-          <div class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-gray-500/15 border border-gray-500/25 text-[10px] text-gray-400 uppercase tracking-widest font-semibold">V1</div>
+        <div
+          class="reveal group relative rounded-2xl bg-dark-800/60 border border-gray-700/50 hover:border-accent/40 transition-all duration-500 card-glow overflow-hidden hover:scale-[1.02]">
+          <div
+            class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-gray-500/15 border border-gray-500/25 text-[10px] text-gray-400 uppercase tracking-widest font-semibold">
+            V1</div>
 
           <div class="p-8">
             <!-- Icon -->
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-600/20 border border-amber-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-              <svg class="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <div
+              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-600/20 border border-amber-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
             </div>
 
             <!-- Content -->
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent-light transition-colors duration-300">DAWN&SEA <span class="text-gray-500 font-normal text-base">— v1</span></h3>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent-light transition-colors duration-300">
+              DAWN&SEA <span class="text-gray-500 font-normal text-base">— v1</span></h3>
             <p class="text-gray-400 text-sm mb-5 leading-relaxed">
-              Version initiale de la plateforme touristique pour l'Algérie. 
-              Interface simple et fonctionnelle permettant de découvrir des destinations, 
+              Version initiale de la plateforme touristique pour l'Algérie.
+              Interface simple et fonctionnelle permettant de découvrir des destinations,
               hébergements et activités à travers le pays.
             </p>
 
             <!-- Tech tags -->
             <div class="flex flex-wrap gap-2 mb-6">
-              <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Laravel</span>
-              <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Tailwind CSS</span>
-              <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">MySQL</span>
-              <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Blade</span>
+              <span
+                class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Laravel</span>
+              <span
+                class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Tailwind
+                CSS</span>
+              <span
+                class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">MySQL</span>
+              <span
+                class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Blade</span>
             </div>
 
             <!-- GitHub button -->
-            <a href="https://github.com/RYAD-BENYAKOUB/DAWN-SEA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors duration-300">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <a href="https://github.com/RYAD-BENYAKOUB/DAWN-SEA" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors duration-300">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
               Voir le code sur GitHub
             </a>
           </div>
         </div>
 
         <!-- ── Card 2: DAWN&SEA v2 (Featured) ── -->
-        <div class="reveal group relative rounded-2xl bg-dark-800/60 border border-gray-700/50 hover:border-accent/40 transition-all duration-500 card-glow overflow-hidden hover:scale-[1.02]" style="transition-delay: 0.05s;">
-          <div class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-accent/15 border border-accent/25 text-[10px] text-accent-light uppercase tracking-widest font-semibold">V2 — IA</div>
+        <div
+          class="reveal group relative rounded-2xl bg-dark-800/60 border border-gray-700/50 hover:border-accent/40 transition-all duration-500 card-glow overflow-hidden hover:scale-[1.02]"
+          style="transition-delay: 0.05s;">
+          <div
+            class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-accent/15 border border-accent/25 text-[10px] text-accent-light uppercase tracking-widest font-semibold">
+            V2 — IA</div>
 
           <div class="p-8">
             <!-- Icon -->
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent-dim/30 to-accent/20 border border-accent/15 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-              <svg class="w-7 h-7 text-accent-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5m-4.75-11.396c.251.023.501.05.75.082M19 14.5l-2.47 3.379a2.25 2.25 0 01-1.81.921H9.28a2.25 2.25 0 01-1.81-.921L5 14.5m14 0V5.236a2.25 2.25 0 00-1.088-1.927l-3.556-2.134a2.25 2.25 0 00-2.312 0L8.588 3.31A2.25 2.25 0 007.5 5.236V14.5"/></svg>
+            <div
+              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent-dim/30 to-accent/20 border border-accent/15 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-7 h-7 text-accent-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5m-4.75-11.396c.251.023.501.05.75.082M19 14.5l-2.47 3.379a2.25 2.25 0 01-1.81.921H9.28a2.25 2.25 0 01-1.81-.921L5 14.5m14 0V5.236a2.25 2.25 0 00-1.088-1.927l-3.556-2.134a2.25 2.25 0 00-2.312 0L8.588 3.31A2.25 2.25 0 007.5 5.236V14.5" />
+              </svg>
             </div>
 
             <!-- Content -->
             <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent-light transition-colors duration-300">
-              DAWN&SEA 
+              DAWN&SEA
               <span class="gradient-text font-semibold text-base">
                 — v2
               </span>
             </h3>
             <p class="text-gray-400 text-sm mb-5 leading-relaxed">
-              Version robuste intégrant l'Intelligence Artificielle. 
-              Analyse des préférences utilisateur pour suggérer des destinations, 
+              Version robuste intégrant l'Intelligence Artificielle.
+              Analyse des préférences utilisateur pour suggérer des destinations,
               hébergements et activités personnalisés grâce à des modèles de machine learning.
             </p>
 
             <!-- Tech tags -->
             <div class="flex flex-wrap gap-2 mb-6">
-              <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Laravel</span>
-              <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Tailwind CSS</span>
-              <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Python</span>
-              <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">IA / ML</span>
-              <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">PostgreSQL</span>
-              <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Supabase</span>
+              <span
+                class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Laravel</span>
+              <span
+                class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Tailwind
+                CSS</span>
+              <span
+                class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Python</span>
+              <span
+                class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">IA
+                / ML</span>
+              <span
+                class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">PostgreSQL</span>
+              <span
+                class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Supabase</span>
             </div>
 
             <!-- GitHub button -->
-            <a href="https://github.com/RYAD-BENYAKOUB/DAWN-SEA-V2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300 group/btn">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <a href="https://github.com/RYAD-BENYAKOUB/DAWN-SEA-V2" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300 group/btn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
               Voir le code sur GitHub
-              <svg class="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover/btn:opacity-100 group-hover/btn:translate-x-0 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              <svg
+                class="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover/btn:opacity-100 group-hover/btn:translate-x-0 transition-all duration-300"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
             </a>
           </div>
         </div>
 
-        <!-- ── Card 2 ── -->
-        <div class="reveal group rounded-2xl bg-dark-800/60 border border-gray-700/50 hover:border-accent/40 transition-all duration-500 card-glow p-8 hover:scale-[1.02]" style="transition-delay: 0.05s;">
-          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent-light transition-colors duration-300">Nom du Projet</h3>
-          <p class="text-gray-400 text-sm mb-5 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">React</span>
-            <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Node.js</span>
-            <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">MongoDB</span>
-          </div>
-          <a href="https://github.com/RYAD-BENYAKOUB/Decision_Making_System_Book_Store" class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors duration-300">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            Voir le code sur GitHub
-          </a>
-        </div>
-
         <!-- ── Card 3: Decision Making System Book Store ── -->
-        <div class="reveal group rounded-2xl bg-dark-800/60 border border-gray-700/50 hover:border-accent/40 transition-all duration-500 card-glow p-8 hover:scale-[1.02]" style="transition-delay: 0.1s;">
-          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+        <div
+          class="reveal group rounded-2xl bg-dark-800/60 border border-gray-700/50 hover:border-accent/40 transition-all duration-500 card-glow p-8 hover:scale-[1.02]"
+          style="transition-delay: 0.1s;">
+          <div
+            class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
+            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+            </svg>
           </div>
-          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent-light transition-colors duration-300">Decision Making System — Book Store</h3>
-          <p class="text-gray-400 text-sm mb-5 leading-relaxed">Système d'aide à la décision pour une librairie. Analyse des données de ventes, gestion des stocks et recommandations d'achat basées sur des algorithmes décisionnels pour optimiser la rentabilité.</p>
+          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent-light transition-colors duration-300">
+            Decision Making System — Book Store
+          </h3>
+          <p class="text-gray-400 text-sm mb-5 leading-relaxed">
+            Système d'aide à la décision pour une librairie. Analyse
+            des données de ventes, gestion des stocks et recommandations d'achat basées sur des algorithmes décisionnels
+            pour optimiser la rentabilité.
+          </p>
           <div class="flex flex-wrap gap-2 mb-6">
-            <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Python</span>
-            <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Data Analysis</span>
-            <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Decision System</span>
+            <span
+              class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">
+              Python
+            </span>
+            <span
+              class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">
+              Data Analysis
+            </span>
+            <span
+              class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">
+              Decision System
+            </span>
           </div>
-          <a href="https://github.com/RYAD-BENYAKOUB/Decision_Making_System_Book_Store" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors duration-300">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <a href="https://github.com/RYAD-BENYAKOUB/Decision_Making_System_Book_Store" target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
             Voir le code sur GitHub
           </a>
         </div>
 
         <!-- ── Card 4: TP GridSim Tri Distribué ── -->
-        <div class="reveal group rounded-2xl bg-dark-800/60 border border-gray-700/50 hover:border-accent/40 transition-all duration-500 card-glow p-8 hover:scale-[1.02] md:col-span-2" style="transition-delay: 0.15s;">
+        <div
+          class="reveal group rounded-2xl bg-dark-800/60 border border-gray-700/50 hover:border-accent/40 transition-all duration-500 card-glow p-8 hover:scale-[1.02] md:col-span-2"
+          style="transition-delay: 0.15s;">
           <div class="md:flex md:items-start md:gap-8">
-            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500/20 to-indigo-500/20 border border-violet-500/10 flex items-center justify-center mb-5 md:mb-0 flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
-              <svg class="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z"/></svg>
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500/20 to-indigo-500/20 border border-violet-500/10 flex items-center justify-center mb-5 md:mb-0 flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
+              </svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent-light transition-colors duration-300">TP GridSim — Tri Distribué</h3>
-              <p class="text-gray-400 text-sm mb-5 leading-relaxed">Simulation de tri distribué utilisant GridSim. Implémentation d'algorithmes de tri parallèles répartis sur une grille de calcul virtuelle pour étudier les performances et l'ordonnancement des tâches distribuées.</p>
+              <h3
+                class="text-xl font-bold text-white mb-2 group-hover:text-accent-light transition-colors duration-300">
+                TP GridSim — Tri Distribué
+              </h3>
+              <p class="text-gray-400 text-sm mb-5 leading-relaxed">
+                Simulation de tri distribué utilisant GridSim.
+                Implémentation d'algorithmes de tri parallèles répartis sur une grille de calcul virtuelle pour étudier
+                les performances et l'ordonnancement des tâches distribuées.
+              </p>
               <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Java</span>
-                <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">GridSim</span>
-                <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Calcul Distribué</span>
-                <span class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Simulation</span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">Java
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">GridSim
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">
+                  Calcul Distribué
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-md bg-dark-600/80 border border-white/5 text-[11px] text-gray-300 font-mono">
+                  Simulation
+                </span>
               </div>
-              <a href="https://github.com/RYAD-BENYAKOUB/TP_GridSim_Tri_Distribue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors duration-300">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <a href="https://github.com/RYAD-BENYAKOUB/TP_GridSim_Tri_Distribue" target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors duration-300">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
                 Voir le code sur GitHub
               </a>
             </div>
@@ -279,40 +395,79 @@
   <!-- ═══════════════════════════════════════════ -->
   <footer id="contact" class="relative border-t border-white/5 bg-dark-900/50">
     <!-- Glow line -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent"></div>
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent">
+    </div>
 
     <div class="max-w-6xl mx-auto px-6 py-20">
       <div class="text-center mb-12 reveal">
-        <span class="inline-block text-accent font-mono text-sm tracking-wider mb-3">// CONTACT</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Travaillons ensemble</h2>
-        <p class="text-gray-400 max-w-md mx-auto">Une idée de projet ? N'hésitez pas à me contacter via vos canaux préférés.</p>
+        <span class="inline-block text-accent font-mono text-sm tracking-wider mb-3">
+          // CONTACT
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          Travaillons ensemble
+
+        </h2>
+        <p class="text-gray-400 max-w-md mx-auto">
+          Une idée de projet ?
+          N'hésitez pas à me contacter via vos canaux
+          préférés.
+        </p>
       </div>
 
       <!-- Social icons -->
       <div class="flex items-center justify-center gap-5 mb-16 reveal">
         <!-- Email -->
-        <a href="mailto:votre@email.com" aria-label="Email" class="group w-12 h-12 rounded-xl bg-dark-700/50 border border-white/5 hover:border-accent/30 hover:bg-accent/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
-          <svg class="w-5 h-5 text-gray-400 group-hover:text-accent-light transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        <a href="mailto:ryadbenyakoub@gmail.com" aria-label="Email"
+          class="group w-12 h-12 rounded-xl bg-dark-700/50 border border-white/5 hover:border-accent/30 hover:bg-accent/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+          <svg class="w-5 h-5 text-gray-400 group-hover:text-accent-light transition-colors duration-300" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
         </a>
 
         <!-- LinkedIn -->
-        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="group w-12 h-12 rounded-xl bg-dark-700/50 border border-white/5 hover:border-accent/30 hover:bg-accent/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
-          <svg class="w-5 h-5 text-gray-400 group-hover:text-accent-light transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <a href="https://www.linkedin.com/in/mohammed-ryad-benyakoub-0b16bb343/" target="_blank"
+          rel="noopener noreferrer" aria-label="LinkedIn"
+          class="group w-12 h-12 rounded-xl bg-dark-700/50 border border-white/5 hover:border-accent/30 hover:bg-accent/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+          <svg class="w-5 h-5 text-gray-400 group-hover:text-accent-light transition-colors duration-300"
+            fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
         </a>
 
         <!-- GitHub -->
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="group w-12 h-12 rounded-xl bg-dark-700/50 border border-white/5 hover:border-accent/30 hover:bg-accent/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
-          <svg class="w-5 h-5 text-gray-400 group-hover:text-accent-light transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        <a href="https://github.com/RYAD-BENYAKOUB" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+          class="group w-12 h-12 rounded-xl bg-dark-700/50 border border-white/5 hover:border-accent/30 hover:bg-accent/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+          <svg class="w-5 h-5 text-gray-400 group-hover:text-accent-light transition-colors duration-300"
+            fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
         </a>
 
         <!-- Instagram -->
-        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="group w-12 h-12 rounded-xl bg-dark-700/50 border border-white/5 hover:border-accent/30 hover:bg-accent/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
-          <svg class="w-5 h-5 text-gray-400 group-hover:text-accent-light transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        <a href="https://www.instagram.com/ryad_benyakoub?igsh=N3ZjYTF0aDBneGJw" target="_blank"
+          rel="noopener noreferrer" aria-label="Instagram"
+          class="group w-12 h-12 rounded-xl bg-dark-700/50 border border-white/5 hover:border-accent/30 hover:bg-accent/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+          <svg class="w-5 h-5 text-gray-400 group-hover:text-accent-light transition-colors duration-300"
+            fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg>
         </a>
 
         <!-- Facebook -->
-        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="group w-12 h-12 rounded-xl bg-dark-700/50 border border-white/5 hover:border-accent/30 hover:bg-accent/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
-          <svg class="w-5 h-5 text-gray-400 group-hover:text-accent-light transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        <a href="https://www.facebook.com/share/1D6UrimVd6/" target="_blank" rel="noopener noreferrer"
+          aria-label="Facebook"
+          class="group w-12 h-12 rounded-xl bg-dark-700/50 border border-white/5 hover:border-accent/30 hover:bg-accent/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
+          <svg class="w-5 h-5 text-gray-400 group-hover:text-accent-light transition-colors duration-300"
+            fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
         </a>
       </div>
 
@@ -322,7 +477,13 @@
           &copy; 2026 <span class="text-gray-400">ryad</span>. Tous droits réservés.
         </p>
         <p class="text-xs text-gray-600 font-mono">
-          Conçu avec <span class="text-accent">&#9829;</span> et beaucoup de <span class="text-gray-400">café</span>.
+          Conçu avec 
+          <span class="text-accent">&#9829;
+          </span> 
+          et beaucoup de 
+          <span class="text-gray-400">
+            café
+          </span>.
         </p>
       </div>
     </div>
@@ -331,4 +492,5 @@
   <script src="main.js" defer></script>
 
 </body>
+
 </html>
