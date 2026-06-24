@@ -43,22 +43,6 @@ Le portfolio met en valeur quatre projets clés :
 
 ---
 
-## 🚀 Lancement Local
-
-Pour visualiser le portfolio en local sur votre machine :
-
-1. **Cloner le dépôt** :
-   ```bash
-   git clone https://github.com/RYAD-BENYAKOUB/this.is.ryad.portfolio.git
-   cd this.is.ryad.portfolio
-   ```
-
-2. **Ouvrir le projet** :
-   - Ouvrez simplement le fichier `index.html` dans n'importe quel navigateur moderne.
-   - Ou lancez un serveur de développement local (par exemple avec l'extension VS Code *Live Server* ou `npx serve .`).
-
----
-
 ## ✍️ Auteur
 
 **Ryad Benyakoub**
