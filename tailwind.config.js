@@ -11,18 +11,18 @@ tailwind.config = {
       },
       colors: {
         dark: {
-          950: '#08090d',
-          900: '#0d0f14',
-          800: '#13161d',
-          700: '#1a1d27',
-          600: '#232733',
+          950: '#020617',   // slate-950
+          900: '#0f172a',   // slate-900
+          800: '#1e293b',   // slate-800
+          700: '#334155',   // slate-700
+          600: '#475569',   // slate-600
         },
         accent: {
-          DEFAULT: '#ff0000',
-          light: '#ff3333',
-          dim: '#8b0000',
-          dark: '#660000',
-          glow: 'rgba(255,0,0,0.15)',
+          DEFAULT: '#6366f1', // indigo-500
+          light: '#22d3ee',   // cyan-400
+          dim: '#4f46e5',     // indigo-600
+          dark: '#312e81',    // indigo-900
+          glow: 'rgba(34,211,238,0.15)', // cyan glow
         }
       },
       animation: {
@@ -41,8 +41,8 @@ tailwind.config = {
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         pulseGlow: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(255,0,0,0.1)' },
-          '50%': { boxShadow: '0 0 40px rgba(255,0,0,0.25)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(99,102,241,0.1)' },
+          '50%': { boxShadow: '0 0 40px rgba(34,211,238,0.25)' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
