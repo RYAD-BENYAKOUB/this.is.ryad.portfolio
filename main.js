@@ -35,6 +35,16 @@
     Kotlin: '#A97BFF',
   };
 
+  // Custom descriptions to override GitHub API
+  const CUSTOM_DESCRIPTIONS = {
+    'DAWN-SEA-IA-': 'Recommendation engine using AI (Multi-Agent System and RAG) for the DAWN&SEA v2 project.',
+    'DAWN-SEA-IA': 'Recommendation engine using AI (Multi-Agent System and RAG) for the DAWN&SEA v2 project.',
+    'DAWN-SEA-V2': 'Version 2 of the existing DAWN&SEA website for tourism recommendation in Algeria.',
+    'AUTOVAULT': 'Personal project: An e-commerce website specializing in supercars.',
+    'discover_ed_event': 'Portfolio for my first client: Fellahi Yasmine, Tour Guide.',
+    'discover-ed-event': 'Portfolio for my first client: Fellahi Yasmine, Tour Guide.'
+  };
+
   // ── State ──
   let allRepos = [];
   let displayedCount = 0;
@@ -191,12 +201,15 @@
       `;
     }
 
+    const customDesc = CUSTOM_DESCRIPTIONS[repo.name] || CUSTOM_DESCRIPTIONS[repo.name.toLowerCase()];
+    const description = customDesc || repo.description || 'No description available.';
+
     card.innerHTML = `
       <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:0.5rem;margin-bottom:0.5rem;">
         <h3>${formatRepoName(repo.name)}</h3>
         ${starBadge}
       </div>
-      <p>${repo.description || 'No description available.'}</p>
+      <p>${description}</p>
       <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;">
         ${langBadge}
       </div>
