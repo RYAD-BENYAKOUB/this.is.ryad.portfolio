@@ -1,0 +1,8 @@
+{
+  "name": "ryad-portfolio",
+  "private": true,
+  "description": "Mohammed Ryad's portfolio website",
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}

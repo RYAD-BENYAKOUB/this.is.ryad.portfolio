@@ -1,0 +1,142 @@
+# ═══════════════════════════════════════════
+# GitHub Actions: New Repo Email Notification
+# Runs every 6 hours to check for new public repos
+# ═══════════════════════════════════════════
+
+name: New Repo Notification
+
+on:
+  schedule:
+    # Every 6 hours
+    - cron: '0 */6 * * *'
+  # Also trigger on repo creation
+  create:
+  # Manual trigger for testing
+  workflow_dispatch:
+
+jobs:
+  check-new-repos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for new repos
+        uses: actions/github-script@v7
+        env:
+          NOTIFY_SECRET: ${{ secrets.NOTIFY_SECRET }}
+          VERCEL_DEPLOY_URL: ${{ secrets.VERCEL_DEPLOY_URL }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const owner = 'RYAD-BENYAKOUB';
+
+            // Fetch current public repos
+            const { data: repos } = await github.rest.repos.listForUser({
+              username: owner,
+              type: 'owner',
+              sort: 'created',
+              direction: 'desc',
+              per_page: 100,
+            });
+
+            const publicRepos = repos
+              .filter(r => !r.private && !r.fork)
+              .map(r => ({ name: r.name, url: r.html_url, created: r.created_at }));
+
+            // Load the previously known repo list from cache
+            let knownRepos = [];
+            try {
+              const { data: artifact } = await github.rest.actions.listArtifactsForRepo({
+                owner,
+                repo: 'this.is.ryad.portfolio',
+                name: 'known-repos',
+                per_page: 1,
+              });
+
+              if (artifact.artifacts.length > 0) {
+                const { data: download } = await github.rest.actions.downloadArtifact({
+                  owner,
+                  repo: 'this.is.ryad.portfolio',
+                  artifact_id: artifact.artifacts[0].id,
+                  archive_format: 'zip',
+                });
+                // Parse the downloaded artifact
+                const AdmZip = require('adm-zip');
+                // Note: In practice, we use a simpler cache approach below
+              }
+            } catch (e) {
+              console.log('No previous artifact found, first run.');
+            }
+
+            // Simpler approach: use a cache file via the Actions cache
+            const fs = require('fs');
+            const cacheFile = '/tmp/known-repos.json';
+
+            try {
+              // Try to restore from GitHub Actions cache
+              const cachePath = `${process.env.GITHUB_WORKSPACE || '/tmp'}/known-repos.json`;
+              if (fs.existsSync(cachePath)) {
+                knownRepos = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
+              }
+            } catch (e) {
+              console.log('No cache file found, treating all repos as known for first run.');
+              // On first run, save current state and exit
+              fs.writeFileSync(cacheFile, JSON.stringify(publicRepos.map(r => r.name)));
+              return;
+            }
+
+            // Find new repos
+            const knownNames = new Set(knownRepos);
+            const newRepos = publicRepos.filter(r => !knownNames.has(r.name));
+
+            if (newRepos.length === 0) {
+              console.log('No new repos found.');
+              // Update cache
+              fs.writeFileSync(cacheFile, JSON.stringify(publicRepos.map(r => r.name)));
+              return;
+            }
+
+            console.log(`Found ${newRepos.length} new repo(s):`);
+            for (const repo of newRepos) {
+              console.log(`  - ${repo.name}: ${repo.url}`);
+
+              // Send notification via Vercel serverless function
+              if (process.env.VERCEL_DEPLOY_URL && process.env.NOTIFY_SECRET) {
+                try {
+                  const response = await fetch(`${process.env.VERCEL_DEPLOY_URL}/api/notify`, {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                      'Authorization': `Bearer ${process.env.NOTIFY_SECRET}`,
+                    },
+                    body: JSON.stringify({
+                      repoName: repo.name,
+                      repoUrl: repo.url,
+                    }),
+                  });
+
+                  if (response.ok) {
+                    console.log(`  ✓ Notification sent for ${repo.name}`);
+                  } else {
+                    console.log(`  ✗ Notification failed: ${response.status}`);
+                  }
+                } catch (e) {
+                  console.log(`  ✗ Notification error: ${e.message}`);
+                }
+              }
+            }
+
+            // Update cache
+            fs.writeFileSync(cacheFile, JSON.stringify(publicRepos.map(r => r.name)));
+
+      - name: Save repo cache
+        uses: actions/cache/save@v4
+        with:
+          path: /tmp/known-repos.json
+          key: known-repos-${{ github.run_id }}
+
+      - name: Restore repo cache
+        uses: actions/cache/restore@v4
+        with:
+          path: /tmp/known-repos.json
+          key: known-repos-
+          restore-keys: |
+            known-repos-

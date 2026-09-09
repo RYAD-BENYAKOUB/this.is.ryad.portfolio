@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="en" class="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>this.is.ryad.portfolio — Développeur Full-Stack</title>
+  <title>Mohammed Ryad — Full Stack Developer</title>
   <meta name="description"
-    content="Portfolio de Ryad — Développeur Full-Stack spécialisé en Laravel, Tailwind CSS, Supabase, PostgreSQL et intégration d'IA." />
+    content="Portfolio of Mohammed Ryad — Full Stack Developer based in Oran, Algeria. Specializing in Laravel, database migration, and deployment workflows. GDG On Campus USTOMB Core Team member." />
+  <meta name="author" content="Mohammed Ryad Benyakoub" />
+  <meta name="keywords" content="Mohammed Ryad, Full Stack Developer, Laravel, Portfolio, Oran, Algeria, GDG, USTOMB" />
 
-  <!-- Tailwind CSS -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mohammed Ryad — Full Stack Developer" />
+  <meta property="og:description" content="Full Stack Developer specializing in Laravel, database migration, and deployment workflows." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="IMG/mylogo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="IMG/r.png" />
+
+  <!-- Tailwind CSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="tailwind.config.js"></script>
 
@@ -16,454 +27,206 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="bg-slate-950 text-slate-200 font-sans antialiased selection:bg-indigo-500/30 selection:text-white">
+<body>
 
   <!-- ═══════════════════════════════════════════ -->
   <!-- NAVIGATION                                  -->
   <!-- ═══════════════════════════════════════════ -->
-  <nav id="navbar"
-    class="fixed top-0 left-0 right-0 z-50 nav-blur bg-slate-950/70 border-b border-slate-800/50 transition-all duration-300">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+  <nav id="navbar" class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding-top:1rem;padding-bottom:1rem;">
       <!-- Logo -->
-      <a href="#hero" class="group flex items-center gap-3">
-        <img src="IMG/mylogo.png" alt="this.is.ryad"
-          class="w-9 h-9 rounded-lg object-cover shadow-lg shadow-indigo-500/20 group-hover:shadow-cyan-400/40 transition-shadow duration-300" />
-        <span class="font-mono text-sm text-slate-400 group-hover:text-slate-200 transition-colors duration-300">
-          <span class="text-emerald-400">this</span><span class="text-slate-600">.</span><span
-            class="text-slate-300">is</span><span class="text-slate-600">.</span><span
-            class="text-white font-semibold">ryad</span><span class="text-slate-600">.</span><span
-            class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">portfolio</span>
+      <a href="#hero" class="flex items-center gap-3" aria-label="Home">
+        <img src="IMG/mylogo.png" alt="Mohammed Ryad Logo"
+          style="width:36px;height:36px;border-radius:8px;object-fit:cover;" />
+        <span class="font-mono" style="font-size:0.8rem;color:var(--text-muted);">
+          <span style="color:var(--accent);">this</span><span style="opacity:0.4;">.</span><span style="color:var(--text-secondary);">is</span><span style="opacity:0.4;">.</span><span style="color:var(--text-primary);font-weight:600;">ryad</span>
         </span>
       </a>
 
-      <!-- Nav Links (Desktop) -->
+      <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-8">
-        <a href="#projets"
-          class="text-sm text-slate-400 hover:text-white transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-full">Projets</a>
-        <a href="#contact"
-          class="text-sm text-slate-400 hover:text-white transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-full">Contact</a>
-        <a href="#contact"
-          class="text-sm px-5 py-2 rounded-lg bg-indigo-500/10 text-cyan-400 border border-indigo-500/20 hover:bg-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300">Collaborer</a>
+        <a href="#education" class="nav-link" data-section="education">Education</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" type="button">
+          <span class="theme-toggle-icon moon">🌙</span>
+          <span class="theme-toggle-icon sun">☀️</span>
+        </button>
       </div>
 
-      <!-- Mobile hamburger -->
-      <button id="menu-toggle" class="md:hidden text-slate-400 hover:text-white transition-colors p-1" aria-label="Menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+      <!-- Mobile Hamburger -->
+      <div class="flex items-center gap-3 md:hidden">
+        <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle dark/light mode" type="button">
+          <span class="theme-toggle-icon moon">🌙</span>
+          <span class="theme-toggle-icon sun">☀️</span>
+        </button>
+        <button id="menu-toggle" class="md:hidden" style="color:var(--text-muted);padding:4px;" aria-label="Open menu" type="button">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
     </div>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800/50 bg-slate-950/95 nav-blur">
-      <div class="px-6 py-4 flex flex-col gap-4">
-        <a href="#projets" class="text-sm text-slate-400 hover:text-white transition-colors">Projets</a>
-        <a href="#contact" class="text-sm text-slate-400 hover:text-white transition-colors">Contact</a>
-        <a href="#contact"
-          class="text-sm px-5 py-2 rounded-lg bg-indigo-500/10 text-cyan-400 border border-indigo-500/20 text-center">Collaborer</a>
-      </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+      <a href="#education" class="nav-link" style="padding:0.5rem 0;">Education</a>
+      <a href="#projects" class="nav-link" style="padding:0.5rem 0;">Projects</a>
+      <a href="#contact" class="nav-link" style="padding:0.5rem 0;">Contact</a>
     </div>
   </nav>
 
   <!-- ═══════════════════════════════════════════ -->
   <!-- HERO SECTION                                -->
   <!-- ═══════════════════════════════════════════ -->
-  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden dot-grid">
-    <!-- Decorative gradient orbs -->
-    <div
-      class="absolute top-1/4 -left-32 w-96 h-96 bg-indigo-900/40 rounded-full blur-[128px] animate-float pointer-events-none">
-    </div>
-    <div
-      class="absolute bottom-1/4 -right-32 w-80 h-80 bg-fuchsia-900/20 rounded-full blur-[100px] animate-float pointer-events-none"
-      style="animation-delay: -3s;"></div>
+  <section id="hero" class="hero dot-grid">
+    <!-- Background glow orbs -->
+    <div class="hero-bg-glow" style="width:400px;height:400px;background:var(--accent-glow);top:20%;left:-10%;opacity:0.6;"></div>
+    <div class="hero-bg-glow" style="width:300px;height:300px;background:var(--accent-secondary-glow);bottom:20%;right:-5%;opacity:0.4;animation-delay:-3s;"></div>
 
-    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-      <!-- Status badge -->
-      <div
-        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs text-slate-400 mb-8 animate-fade-in">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        Disponible pour de nouveaux projets
+    <div class="container" style="position:relative;z-index:2;text-align:center;">
+      <!-- Profile Photo -->
+      <div class="animate-fade-up" style="margin-bottom:1.5rem;">
+        <img src="IMG/IMG-20250103-WA0021.jpg" alt="Mohammed Ryad — Full Stack Developer" class="profile-photo" />
       </div>
 
-      <!-- Main heading -->
-      <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mb-6 animate-fade-up">
-        <span class="text-white">Je conçois des</span><br />
-        <span class="gradient-text">expériences digitales</span><br />
-        <span class="text-white">complètes.</span>
+      <!-- Status Badge -->
+      <div class="animate-fade-up animate-fade-up-delay-1" style="margin-bottom:1.5rem;">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          Available for new projects
+        </div>
+      </div>
+
+      <!-- Name -->
+      <h1 class="animate-fade-up animate-fade-up-delay-1" style="margin-bottom:1rem;">
+        Mohammed Ryad
       </h1>
 
-      <!-- Sub-heading -->
-      <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up"
-        style="animation-delay: 0.15s;">
-        Développeur <span class="text-white font-medium">Full-Stack</span> passionné par les architectures modernes.
-        Je transforme des idées en produits performants avec
-        <span class="text-cyan-400 font-medium">Laravel</span>,
-        <span class="text-cyan-400 font-medium">Tailwind CSS</span>,
-        <span class="text-emerald-400 font-medium">Supabase</span>,
-        <span class="text-indigo-400 font-medium">PostgreSQL</span>
-        et l'intégration d'<span class="text-fuchsia-400 font-medium">Intelligence Artificielle</span>.
+      <!-- Bio -->
+      <p class="animate-fade-up animate-fade-up-delay-2" style="max-width:560px;margin:0 auto 2rem;font-size:1.05rem;line-height:1.8;color:var(--text-secondary);">
+        Full Stack Developer based in Oran, Algeria, focused on
+        <strong style="color:var(--text-primary);">Laravel</strong> web development,
+        database migration, and deployment workflows. Core Team member of
+        <strong style="color:var(--accent);">Google Developer Groups (GDG)</strong>
+        On Campus at USTOMB.
       </p>
 
-      <!-- CTA buttons -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up"
-        style="animation-delay: 0.3s;">
-        <a href="#projets"
-          class="group px-8 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-semibold text-sm shadow-lg shadow-indigo-500/25 hover:shadow-cyan-400/40 transition-all duration-300 flex items-center gap-2">
-          Explorer mes projets
-          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      <!-- CTA Buttons -->
+      <div class="animate-fade-up animate-fade-up-delay-3" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-bottom:3rem;">
+        <a href="#projects" class="btn btn-primary">
+          View Projects
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </a>
-        <a href="#contact"
-          class="px-8 py-3.5 rounded-xl bg-slate-800/50 border border-slate-700 text-slate-300 hover:text-white hover:border-slate-600 font-medium text-sm transition-all duration-300">
-          Me contacter
+        <a href="#contact" class="btn btn-secondary">
+          Contact Me
         </a>
       </div>
 
-      <!-- Tech stack pills -->
-      <div class="mt-16 flex flex-wrap items-center justify-center gap-3 animate-fade-up"
-        style="animation-delay: 0.45s;">
-        <span
-          class="px-3 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 text-xs text-rose-400 font-mono">Laravel</span>
-        <span
-          class="px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs text-cyan-400 font-mono">Tailwind
-          CSS</span>
-        <span
-          class="px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-400 font-mono">Supabase</span>
-        <span
-          class="px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs text-indigo-400 font-mono">PostgreSQL</span>
-        <span
-          class="px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs text-amber-400 font-mono">Python /
-          IA</span>
-        <span class="px-3 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-xs text-violet-400 font-mono">REST
-          API</span>
-      </div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div
-      class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600 animate-fade-in"
-      style="animation-delay: 1s;">
-      <span class="text-[10px] uppercase tracking-widest">Scroll</span>
-      <div class="w-5 h-8 rounded-full border border-slate-700 flex items-start justify-center p-1">
-        <div class="w-1 h-2 rounded-full bg-cyan-400 animate-bounce"></div>
+      <!-- Scroll indicator -->
+      <div class="animate-fade-up animate-fade-up-delay-3" style="color:var(--text-muted);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;">
+        <span>Scroll to explore</span>
+        <div style="width:20px;height:32px;border:1.5px solid var(--border-primary);border-radius:10px;margin:0.5rem auto 0;display:flex;align-items:flex-start;justify-content:center;padding-top:6px;">
+          <div style="width:3px;height:8px;border-radius:2px;background:var(--accent);animation:float 2s ease-in-out infinite;"></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════ -->
-  <!-- PROJETS SECTION                             -->
+  <!-- EDUCATION SECTION                           -->
   <!-- ═══════════════════════════════════════════ -->
-  <section id="projets" class="relative py-28 px-6">
-    <div class="max-w-6xl mx-auto">
-      <!-- Section header -->
-      <div class="text-center mb-16 reveal">
-        <span class="inline-block text-cyan-400 font-mono text-sm tracking-wider mb-3">// PROJETS</span>
-        <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Ce que j'ai construit</h2>
-        <p class="text-slate-400 max-w-xl mx-auto">Une sélection de projets reflétant ma passion pour le code propre, le
-          design soigné et les solutions innovantes.</p>
+  <section id="education" style="background:var(--bg-secondary);transition:background-color 0.4s ease;">
+    <div class="container">
+      <!-- Section Header -->
+      <div style="text-align:center;margin-bottom:3rem;" class="reveal">
+        <span class="section-label">Education</span>
+        <h2>Academic Journey</h2>
+        <p class="section-desc" style="margin-top:0.75rem;">
+          My path through Computer Science, from undergraduate studies to a Master's in Information Systems & Data.
+        </p>
       </div>
 
-      <!-- Projects grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Timeline -->
+      <div class="timeline" style="max-width:640px;margin:0 auto;">
 
-        <!-- ── Card 1: DAWN&SEA v1 ── -->
-        <div
-          class="reveal group relative rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-500 card-glow overflow-hidden hover:scale-[1.02]">
-          <div
-            class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-slate-700/30 border border-slate-600/40 text-[10px] text-slate-400 uppercase tracking-widest font-semibold">
-            V1</div>
-
-          <div class="p-8">
-            <!-- Icon -->
-            <div
-              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-600/20 border border-amber-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-              <svg class="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            </div>
-
-            <!-- Content -->
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-              DAWN&SEA <span class="text-slate-500 font-normal text-base">— v1</span></h3>
-            <p class="text-slate-400 text-sm mb-5 leading-relaxed">
-              Version initiale de la plateforme touristique pour l'Algérie.
-              Interface simple et fonctionnelle permettant de découvrir des destinations,
-              hébergements et activités à travers le pays.
-            </p>
-
-            <!-- Tech tags -->
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span
-                class="px-2.5 py-1 rounded-md bg-rose-500/10 border border-rose-500/20 text-[11px] text-rose-400 font-mono">Laravel</span>
-              <span
-                class="px-2.5 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-[11px] text-cyan-400 font-mono">Tailwind
-                CSS</span>
-              <span
-                class="px-2.5 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-[11px] text-blue-400 font-mono">MySQL</span>
-              <span
-                class="px-2.5 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[11px] text-orange-400 font-mono">Blade</span>
-            </div>
-
-            <!-- GitHub button -->
-            <a href="https://github.com/RYAD-BENYAKOUB/DAWN-SEA" target="_blank" rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-cyan-400 transition-colors duration-300">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-              </svg>
-              Voir le code sur GitHub
-            </a>
-          </div>
-        </div>
-
-        <!-- ── Card 2: DAWN&SEA v2 (Featured) ── -->
-        <div
-          class="reveal group relative rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-500 card-glow overflow-hidden hover:scale-[1.02]"
-          style="transition-delay: 0.05s;">
-          <div
-            class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-fuchsia-500/15 border border-fuchsia-500/25 text-[10px] text-fuchsia-400 uppercase tracking-widest font-semibold">
-            V2 — IA</div>
-
-          <div class="p-8">
-            <!-- Icon -->
-            <div
-              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-600/30 to-cyan-500/20 border border-indigo-500/15 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-              <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5m-4.75-11.396c.251.023.501.05.75.082M19 14.5l-2.47 3.379a2.25 2.25 0 01-1.81.921H9.28a2.25 2.25 0 01-1.81-.921L5 14.5m14 0V5.236a2.25 2.25 0 00-1.088-1.927l-3.556-2.134a2.25 2.25 0 00-2.312 0L8.588 3.31A2.25 2.25 0 007.5 5.236V14.5" />
-              </svg>
-            </div>
-
-            <!-- Content -->
-            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-              DAWN&SEA
-              <span class="gradient-text font-semibold text-base">
-                — v2
+        <!-- Year 5 — Current (M2) -->
+        <div class="timeline-item current reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div style="display:flex;align-items:center;flex-wrap:wrap;gap:0.25rem;">
+              <span class="timeline-year">2026 — 2027</span>
+              <span class="timeline-badge">
+                <span class="pulse-dot"></span>
+                In Progress
               </span>
-            </h3>
-            <p class="text-slate-400 text-sm mb-5 leading-relaxed">
-              Version robuste intégrant l'Intelligence Artificielle.
-              Analyse des préférences utilisateur pour suggérer des destinations,
-              hébergements et activités personnalisés grâce à des modèles de machine learning.
-            </p>
-
-            <!-- Tech tags -->
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span
-                class="px-2.5 py-1 rounded-md bg-rose-500/10 border border-rose-500/20 text-[11px] text-rose-400 font-mono">Laravel</span>
-              <span
-                class="px-2.5 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-[11px] text-cyan-400 font-mono">Tailwind
-                CSS</span>
-              <span
-                class="px-2.5 py-1 rounded-md bg-amber-500/10 border border-amber-500/20 text-[11px] text-amber-400 font-mono">Python</span>
-              <span
-                class="px-2.5 py-1 rounded-md bg-fuchsia-500/10 border border-fuchsia-500/20 text-[11px] text-fuchsia-400 font-mono">IA
-                / ML</span>
-              <span
-                class="px-2.5 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[11px] text-indigo-400 font-mono">PostgreSQL</span>
-              <span
-                class="px-2.5 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-400 font-mono">Supabase</span>
             </div>
-
-            <!-- GitHub button -->
-            <a href="https://github.com/RYAD-BENYAKOUB/DAWN-SEA-V2" target="_blank" rel="noopener noreferrer"
-              class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-sm text-slate-300 hover:text-cyan-400 hover:bg-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300 group/btn">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-              </svg>
-              Voir le code sur GitHub
-              <svg
-                class="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover/btn:opacity-100 group-hover/btn:translate-x-0 transition-all duration-300"
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
+            <h3 style="margin:0.5rem 0 0.375rem;">Master 2 — Information Systems & Data</h3>
+            <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.6;">
+              USTOMB, Oran · Final year of Master's program. Focus on advanced database systems,
+              data engineering, big data analytics, and information system architecture.
+            </p>
           </div>
         </div>
 
-        <!-- ── Card 3: Decision Making System Book Store ── -->
-        <div
-          class="reveal group rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-500 card-glow p-8 hover:scale-[1.02]"
-          style="transition-delay: 0.1s;">
-          <div
-            class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-            </svg>
+        <!-- Year 4 (M1) -->
+        <div class="timeline-item reveal" data-delay="1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2025 — 2026</span>
+            <h3 style="margin:0.5rem 0 0.375rem;">Master 1 — Information Systems & Data</h3>
+            <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.6;">
+              USTOMB, Oran · First year of Master's. Courses in distributed systems,
+              data warehousing, machine learning fundamentals, and research methodology.
+            </p>
           </div>
-          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-            Decision Making System — Book Store
-          </h3>
-          <p class="text-slate-400 text-sm mb-5 leading-relaxed">
-            Système d'aide à la décision pour une librairie. Analyse
-            des données de ventes, gestion des stocks et recommandations d'achat basées sur des algorithmes décisionnels
-            pour optimiser la rentabilité.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span
-              class="px-2.5 py-1 rounded-md bg-amber-500/10 border border-amber-500/20 text-[11px] text-amber-400 font-mono">
-              Java
-            </span>
-            <span
-              class="px-2.5 py-1 rounded-md bg-sky-500/10 border border-sky-500/20 text-[11px] text-sky-400 font-mono">
-              Data Analysis
-            </span>
-            <span
-              class="px-2.5 py-1 rounded-md bg-violet-500/10 border border-violet-500/20 text-[11px] text-violet-400 font-mono">
-              Decision System
-            </span>
-          </div>
-          <a href="https://github.com/RYAD-BENYAKOUB/Decision_Making_System_Book_Store" target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-cyan-400 transition-colors duration-300">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-            </svg>
-            Voir le code sur GitHub
-          </a>
         </div>
 
-        <!-- ── Card 4: DAWN&SEA IA ── -->
-        <div
-          class="reveal group rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-500 card-glow p-8 hover:scale-[1.02]"
-          style="transition-delay: 0.15s;">
-          <div
-            class="w-12 h-12 rounded-xl bg-gradient-to-br from-fuchsia-500/20 to-purple-500/20 border border-fuchsia-500/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-            <svg class="w-6 h-6 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5m-4.75-11.396c.251.023.501.05.75.082M19 14.5l-2.47 3.379a2.25 2.25 0 01-1.81.921H9.28a2.25 2.25 0 01-1.81-.921L5 14.5m14 0V5.236a2.25 2.25 0 00-1.088-1.927l-3.556-2.134a2.25 2.25 0 00-2.312 0L8.588 3.31A2.25 2.25 0 007.5 5.236V14.5" />
-            </svg>
+        <!-- Year 3 (L3) — Bachelor's -->
+        <div class="timeline-item reveal" data-delay="2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2024 — 2025</span>
+            <h3 style="margin:0.5rem 0 0.375rem;">Licence 3 — Computer Science</h3>
+            <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.6;">
+              USTOMB, Oran · Bachelor's degree obtained. Software engineering, database design,
+              web development, and final-year project (DAWN&SEA tourism platform).
+            </p>
           </div>
-          <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-            DAWN&SEA — IA Engine
-          </h3>
-          <p class="text-slate-400 text-sm mb-5 leading-relaxed">
-            Moteur d'Intelligence Artificielle développé pour la plateforme DAWN&SEA. Implémentation de modèles avancés pour l'analyse, la prédiction et l'optimisation des recommandations touristiques.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span
-              class="px-2.5 py-1 rounded-md bg-amber-500/10 border border-amber-500/20 text-[11px] text-amber-400 font-mono">
-              Python
-            </span>
-            <span
-              class="px-2.5 py-1 rounded-md bg-fuchsia-500/10 border border-fuchsia-500/20 text-[11px] text-fuchsia-400 font-mono">
-              Machine Learning
-            </span>
-            <span
-              class="px-2.5 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-[11px] text-cyan-400 font-mono">
-              Data Science
-            </span>
-          </div>
-          <a href="https://github.com/RYAD-BENYAKOUB/DAWN-SEA-IA-" target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-cyan-400 transition-colors duration-300">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-            </svg>
-            Voir le code sur GitHub
-          </a>
         </div>
 
-        <!-- ── Card 5: TP GridSim Tri Distribué ── -->
-        <div
-          class="reveal group rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-500 card-glow p-8 hover:scale-[1.02]"
-          style="transition-delay: 0.2s;">
-          <div
-            class="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500/20 to-indigo-500/20 border border-violet-500/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-            <svg class="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
-            </svg>
+        <!-- Year 2 (L2) -->
+        <div class="timeline-item reveal" data-delay="3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2023 — 2024</span>
+            <h3 style="margin:0.5rem 0 0.375rem;">Licence 2 — Computer Science</h3>
+            <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.6;">
+              USTOMB, Oran · Data structures & algorithms, object-oriented programming,
+              operating systems, and introduction to databases.
+            </p>
           </div>
-          <h3
-            class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-            TP GridSim — Tri Distribué
-          </h3>
-          <p class="text-slate-400 text-sm mb-5 leading-relaxed">
-            Simulation de tri distribué utilisant GridSim.
-            Implémentation d'algorithmes de tri parallèles répartis sur une grille de calcul virtuelle pour étudier
-            les performances et l'ordonnancement des tâches distribuées.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span
-              class="px-2.5 py-1 rounded-md bg-orange-500/10 border border-orange-500/20 text-[11px] text-orange-400 font-mono">Java
-            </span>
-            <span
-              class="px-2.5 py-1 rounded-md bg-teal-500/10 border border-teal-500/20 text-[11px] text-teal-400 font-mono">GridSim
-            </span>
-            <span
-              class="px-2.5 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/20 text-[11px] text-indigo-400 font-mono">
-              Calcul Distribué
-            </span>
-            <span
-              class="px-2.5 py-1 rounded-md bg-violet-500/10 border border-violet-500/20 text-[11px] text-violet-400 font-mono">
-              Simulation
-            </span>
-          </div>
-          <a href="https://github.com/RYAD-BENYAKOUB/TP_GridSim_Tri_Distribue" target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-cyan-400 transition-colors duration-300">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-            </svg>
-            Voir le code sur GitHub
-          </a>
         </div>
 
-        <!-- ── Card 6: AUTOVAULT ── -->
-        <div
-          class="reveal group rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-500 card-glow p-8 hover:scale-[1.02]"
-          style="transition-delay: 0.25s;">
-          <div
-            class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/20 to-rose-600/20 border border-red-500/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-            </svg>
+        <!-- Year 1 (L1) -->
+        <div class="timeline-item reveal" data-delay="4">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2022 — 2023</span>
+            <h3 style="margin:0.5rem 0 0.375rem;">Licence 1 — Mathematics & Computer Science</h3>
+            <p style="font-size:0.875rem;color:var(--text-muted);line-height:1.6;">
+              USTOMB, Oran · Foundations: programming fundamentals, discrete math,
+              linear algebra, and introduction to computer architecture.
+            </p>
           </div>
-          <h3
-            class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-            AUTOVAULT
-          </h3>
-          <p class="text-slate-400 text-sm mb-5 leading-relaxed">
-            Plateforme e-commerce de concessionnaire automobile de luxe. Implémentation d'une interface immersive, d'une visionneuse 3D de véhicules et d'un système de réservation complet.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span
-              class="px-2.5 py-1 rounded-md bg-rose-500/10 border border-rose-500/20 text-[11px] text-rose-400 font-mono">Laravel 12
-            </span>
-            <span
-              class="px-2.5 py-1 rounded-md bg-pink-500/10 border border-pink-500/20 text-[11px] text-pink-400 font-mono">Livewire
-            </span>
-            <span
-              class="px-2.5 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-[11px] text-cyan-400 font-mono">Tailwind CSS
-            </span>
-            <span
-              class="px-2.5 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-[11px] text-blue-400 font-mono">3D Viewer
-            </span>
-          </div>
-          <a href="https://github.com/RYAD-BENYAKOUB/AUTOVAULT" target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-cyan-400 transition-colors duration-300">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-            </svg>
-            Voir le code sur GitHub
-          </a>
         </div>
 
       </div>
@@ -471,106 +234,195 @@
   </section>
 
   <!-- ═══════════════════════════════════════════ -->
-  <!-- CONTACT / FOOTER                            -->
+  <!-- PROJECTS SECTION                            -->
   <!-- ═══════════════════════════════════════════ -->
-  <footer id="contact" class="relative border-t border-slate-800/50 bg-slate-900/50">
-    <!-- Glow line -->
-    <div
-      class="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent">
+  <section id="projects">
+    <div class="container">
+      <!-- Section Header -->
+      <div style="text-align:center;margin-bottom:3rem;" class="reveal">
+        <span class="section-label">Projects</span>
+        <h2>What I've Built</h2>
+        <p class="section-desc" style="margin-top:0.75rem;">
+          A selection of projects from my GitHub, reflecting my passion for clean code, thoughtful design, and innovative solutions.
+        </p>
+      </div>
+
+      <!-- Projects Grid (populated by JS) -->
+      <div id="projects-grid" class="projects-grid">
+        <!-- Skeleton cards (shown while loading) -->
+        <div class="skeleton-card" id="skeleton-1">
+          <div class="skeleton skeleton-line h-6 w-3/4"></div>
+          <div class="skeleton skeleton-line w-full"></div>
+          <div class="skeleton skeleton-line w-full"></div>
+          <div class="skeleton skeleton-line w-1/2"></div>
+          <div style="display:flex;gap:0.5rem;margin-top:1rem;">
+            <div class="skeleton" style="width:60px;height:22px;border-radius:4px;"></div>
+            <div class="skeleton" style="width:40px;height:22px;border-radius:4px;"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" id="skeleton-2">
+          <div class="skeleton skeleton-line h-6 w-3/4"></div>
+          <div class="skeleton skeleton-line w-full"></div>
+          <div class="skeleton skeleton-line w-full"></div>
+          <div class="skeleton skeleton-line w-1/2"></div>
+          <div style="display:flex;gap:0.5rem;margin-top:1rem;">
+            <div class="skeleton" style="width:60px;height:22px;border-radius:4px;"></div>
+            <div class="skeleton" style="width:40px;height:22px;border-radius:4px;"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" id="skeleton-3">
+          <div class="skeleton skeleton-line h-6 w-3/4"></div>
+          <div class="skeleton skeleton-line w-full"></div>
+          <div class="skeleton skeleton-line w-full"></div>
+          <div class="skeleton skeleton-line w-1/2"></div>
+          <div style="display:flex;gap:0.5rem;margin-top:1rem;">
+            <div class="skeleton" style="width:60px;height:22px;border-radius:4px;"></div>
+            <div class="skeleton" style="width:40px;height:22px;border-radius:4px;"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" id="skeleton-4">
+          <div class="skeleton skeleton-line h-6 w-3/4"></div>
+          <div class="skeleton skeleton-line w-full"></div>
+          <div class="skeleton skeleton-line w-full"></div>
+          <div class="skeleton skeleton-line w-1/2"></div>
+          <div style="display:flex;gap:0.5rem;margin-top:1rem;">
+            <div class="skeleton" style="width:60px;height:22px;border-radius:4px;"></div>
+            <div class="skeleton" style="width:40px;height:22px;border-radius:4px;"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" id="skeleton-5">
+          <div class="skeleton skeleton-line h-6 w-3/4"></div>
+          <div class="skeleton skeleton-line w-full"></div>
+          <div class="skeleton skeleton-line w-full"></div>
+          <div class="skeleton skeleton-line w-1/2"></div>
+          <div style="display:flex;gap:0.5rem;margin-top:1rem;">
+            <div class="skeleton" style="width:60px;height:22px;border-radius:4px;"></div>
+            <div class="skeleton" style="width:40px;height:22px;border-radius:4px;"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" id="skeleton-6">
+          <div class="skeleton skeleton-line h-6 w-3/4"></div>
+          <div class="skeleton skeleton-line w-full"></div>
+          <div class="skeleton skeleton-line w-full"></div>
+          <div class="skeleton skeleton-line w-1/2"></div>
+          <div style="display:flex;gap:0.5rem;margin-top:1rem;">
+            <div class="skeleton" style="width:60px;height:22px;border-radius:4px;"></div>
+            <div class="skeleton" style="width:40px;height:22px;border-radius:4px;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Load More -->
+      <div id="load-more-container" style="text-align:center;margin-top:2rem;display:none;">
+        <button id="load-more-btn" class="load-more-btn" type="button">
+          Load More
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Error state -->
+      <div id="projects-error" style="display:none;text-align:center;padding:3rem 1rem;">
+        <p style="color:var(--text-muted);font-size:0.9rem;">
+          Could not load projects. Please check back later or visit my
+          <a href="https://github.com/RYAD-BENYAKOUB" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">GitHub profile</a>.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="max-w-6xl mx-auto px-6 py-20">
-      <div class="text-center mb-12 reveal">
-        <span class="inline-block text-cyan-400 font-mono text-sm tracking-wider mb-3">
-          // CONTACT
-        </span>
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-          Travaillons ensemble
-
-        </h2>
-        <p class="text-slate-400 max-w-md mx-auto">
-          Une idée de projet ?
-          N'hésitez pas à me contacter via vos canaux
-          préférés.
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CONTACT SECTION                             -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section id="contact" style="background:var(--bg-secondary);transition:background-color 0.4s ease;">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:3rem;" class="reveal">
+        <span class="section-label">Contact</span>
+        <h2>Let's Work Together</h2>
+        <p class="section-desc" style="margin-top:0.75rem;">
+          Have a project idea or want to collaborate? Feel free to reach out through any of these channels.
         </p>
       </div>
 
-      <!-- Social icons -->
-      <div class="flex items-center justify-center gap-5 mb-16 reveal">
-        <!-- Email -->
-        <a href="mailto:ryadbenyakoub@gmail.com" aria-label="Email"
-          class="group w-12 h-12 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-cyan-400/30 hover:bg-cyan-400/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors duration-300" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-        </a>
+      <div style="max-width:720px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:3rem;" class="reveal" data-delay="1">
 
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/mohammed-ryad-benyakoub-0b16bb343/" target="_blank"
-          rel="noopener noreferrer" aria-label="LinkedIn"
-          class="group w-12 h-12 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-cyan-400/30 hover:bg-cyan-400/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors duration-300"
-            fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-          </svg>
-        </a>
+        <!-- Left: Social + Email -->
+        <div style="text-align:center;">
+          <!-- Email -->
+          <a href="mailto:ryadbenyakoub@gmail.com" style="display:inline-flex;align-items:center;gap:0.5rem;color:var(--accent);font-size:1rem;font-weight:500;margin-bottom:2rem;">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            ryadbenyakoub@gmail.com
+          </a>
 
-        <!-- GitHub -->
-        <a href="https://github.com/RYAD-BENYAKOUB" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
-          class="group w-12 h-12 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-cyan-400/30 hover:bg-cyan-400/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors duration-300"
-            fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-          </svg>
-        </a>
+          <!-- Social Icons -->
+          <div style="display:flex;justify-content:center;gap:0.75rem;margin-bottom:2rem;">
+            <!-- GitHub -->
+            <a href="https://github.com/RYAD-BENYAKOUB" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/mohammed-ryad-benyakoub-0b16bb343/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/ryad_benyakoub?igsh=N3ZjYTF0aDBneGJw" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+            </a>
+          </div>
 
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/ryad_benyakoub?igsh=N3ZjYTF0aDBneGJw" target="_blank"
-          rel="noopener noreferrer" aria-label="Instagram"
-          class="group w-12 h-12 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-cyan-400/30 hover:bg-cyan-400/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors duration-300"
-            fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-          </svg>
-        </a>
+          <!-- Contact Form -->
+          <form id="contact-form" action="https://formspree.io/f/xdeoyzyp" method="POST" style="max-width:480px;margin:0 auto;text-align:left;">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Send Message
+            </button>
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
 
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/share/1D6UrimVd6/" target="_blank" rel="noopener noreferrer"
-          aria-label="Facebook"
-          class="group w-12 h-12 rounded-xl bg-slate-800/50 border border-slate-700 hover:border-cyan-400/30 hover:bg-cyan-400/10 flex items-center justify-center transition-all duration-300 hover:-translate-y-1">
-          <svg class="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors duration-300"
-            fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-          </svg>
-        </a>
       </div>
+    </div>
+  </section>
 
-      <!-- Bottom bar -->
-      <div class="border-t border-slate-800/50 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-xs text-slate-600 font-mono">
-          &copy; 2026 <span class="text-slate-400">ryad</span>. Tous droits réservés.
-        </p>
-        <p class="text-xs text-slate-600 font-mono">
-          Conçu avec 
-          <span class="text-cyan-400">&hearts;
-          </span> 
-          et beaucoup de 
-          <span class="text-slate-400">
-            café
-          </span>.
-        </p>
-      </div>
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- FOOTER                                      -->
+  <!-- ═══════════════════════════════════════════ -->
+  <footer>
+    <div class="container" style="padding-top:2rem;padding-bottom:2rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;">
+      <p style="font-size:0.75rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace;">
+        &copy; 2026 <span style="color:var(--text-secondary);">Mohammed Ryad</span>. All rights reserved.
+      </p>
+      <p style="font-size:0.75rem;color:var(--text-muted);font-family:'JetBrains Mono',monospace;">
+        Built with <span style="color:var(--accent);">&hearts;</span> and lots of <span style="color:var(--text-secondary);">coffee</span>.
+      </p>
     </div>
   </footer>
 
   <script src="main.js" defer></script>
-
 </body>
 
 </html>
