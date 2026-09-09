@@ -12,14 +12,14 @@ tailwind.config = {
       },
       colors: {
         accent: {
-          DEFAULT: '#6366f1',
-          hover: '#818cf8',
-          dim: '#4f46e5',
-          glow: 'rgba(99,102,241,0.15)',
+          DEFAULT: '#007acc',
+          hover: '#0098ff',
+          dim: '#0062a3',
+          glow: 'rgba(0,122,204,0.15)',
         },
         secondary: {
-          DEFAULT: '#22d3ee',
-          dim: '#0891b2',
+          DEFAULT: '#4fc1ff',
+          dim: '#007acc',
         },
       },
       animation: {
