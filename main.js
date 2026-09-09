@@ -42,7 +42,19 @@
     'DAWN-SEA-V2': 'Version 2 of the existing DAWN&SEA website for tourism recommendation in Algeria.',
     'AUTOVAULT': 'Personal project: An e-commerce website specializing in supercars.',
     'discover_ed_event': 'Portfolio for my first client: Fellahi Yasmine, Tour Guide.',
-    'discover-ed-event': 'Portfolio for my first client: Fellahi Yasmine, Tour Guide.'
+    'discover-ed-event': 'Portfolio for my first client: Fellahi Yasmine, Tour Guide.',
+    'Discover-Ed-Events': 'Portfolio for my first client: Fellahi Yasmine, Tour Guide.',
+    
+    // University Projects
+    'AHP-JAVA': 'University Project: Java AHP (Analytic Hierarchy Process) application for decision-making with a Graphical User Interface.',
+    'Decision_Making_System_Book_Store': 'University Project: Design and implementation of a Data Warehouse (DW) for a bookstore using an ETL process built with Talend.',
+    'JAVA-CHATROOM': 'University Project: Instant messaging application developed in Java using Client/Server architecture.',
+    'RMI': 'University Project: Java RMI Calculator (Client/Server + GUI).',
+    'portfolio-university-projects': 'University Project: Repository containing various practical works and academic projects completed during my CS degree.',
+    'TP_GL': 'University Project: Practical work completed for the Software Engineering module.',
+    'TP_GridSim_Tri_Distribue': 'University Project: Practical work on Distributed Sorting using GridSim.',
+    'TP_IHM': 'University Project: Practical work for Human-Machine Interface (IHM) module.',
+    'TP_SAD': 'University Project: Practical work for Decision Support Systems (SAD) module.'
   };
 
   // ── State ──
