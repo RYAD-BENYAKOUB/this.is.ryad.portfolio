@@ -57,6 +57,11 @@
     'TP_SAD': 'University Project: Practical work for Decision Support Systems (SAD) module.'
   };
 
+  // Custom live demo links to override GitHub API
+  const CUSTOM_LINKS = {
+    'DAWN-SEA-V2': 'https://dawn-sea-v2-production.up.railway.app/'
+  };
+
   // ── State ──
   let allRepos = [];
   let displayedCount = 0;
@@ -202,9 +207,10 @@
     }
 
     let homepageLink = '';
-    if (repo.homepage) {
+    const customLink = CUSTOM_LINKS[repo.name] || repo.homepage;
+    if (customLink) {
       homepageLink = `
-        <a href="${repo.homepage}" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live demo of ${repo.name}">
+        <a href="${customLink}" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live demo of ${repo.name}">
           <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>
